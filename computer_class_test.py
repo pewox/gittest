@@ -93,3 +93,4 @@ computer_neu.computer_herunterfahren()
 computer_neu.ram_aendern(-90)
 computer_neu.ausgabe()
 computer_neu.computer_starten()
+#OK
