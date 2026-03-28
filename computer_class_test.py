@@ -15,9 +15,9 @@ class Computer:
         if self.computer_ein == False:
             if self.cpu_core == 0:
                 self.__str__("Keine CPU vorhanden, kein Start möglich!")
-            elif self.ram == 0:
+            if self.ram == 0:
                 self.__str__("Kein RAM vorhanden, kein Start möglich!")
-            elif self.hdd == 0:
+            if self.hdd == 0:
                 self.__str__("Keine HDD vorhanden, kein Start möglich!")
             else:
                 self.computer_ein = True
@@ -31,7 +31,7 @@ class Computer:
     def cpu_kerne_aendern(self, kerne):
         if self.computer_ein == True:
             self.__str__("Computer läuft noch!")
-        elif self.cpu_core + kerne < 0:
+        if self.cpu_core + kerne < 0:
                 self.cpu_core = 0
                 self.__str__("CPU entfernt")
         else: 
@@ -41,7 +41,7 @@ class Computer:
     def ram_aendern(self, ram_zusatz):
         if self.computer_ein == True:
             self.__str__("Computer läuft noch!")
-        elif self.ram + ram_zusatz < 0:
+        if self.ram + ram_zusatz < 0:
             self.ram = 0
             self.__str__("RAM entfernt")
         else:
@@ -51,7 +51,7 @@ class Computer:
     def hdd_aendern(self,hdd_zusatz):
         if self.computer_ein == True:
             self.__str__("Computer läuft noch!")
-        elif self.hdd + hdd_zusatz < 0:
+        if self.hdd + hdd_zusatz < 0:
             self.hdd = 0
             self.__str__("HDD entfernt")
         else:
